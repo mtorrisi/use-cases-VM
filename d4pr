@@ -1,0 +1,29 @@
+#cloud-config
+hostname: d4pr
+fqdn: d4pr.sci-gaia.eu
+manage_etc_hosts: true
+package_update: true
+package_upgrade: true
+users:
+  - name: d4pr 
+    ssh-authorized-keys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDDq2Ejyci/TNDoj0STFlPRpgWhWHQbPks0LffVAIPRpFFdiZG7Gzz3Dv04AT2NaCw86rSPvGJw09qkczTG3RExceUtq+fo4x1m5EQVW1eYNstbO9tQb1hAPDFA5LXRBPBqNaFisUj2QxOSzccQlzCD5g/aaHF9J9DhXI48zqXUTT2q9myoqRkRKYYsoqUZL5q/jXIisyFPZmsExfZKd+Q0Ehag0veksq7BGULhp6Dmc7sYzXOj3KbRKUyDw7H/fkoNbvO4NCU6hLoaQRPpXwvvqVH3Olp28DQUW92+MNmanmWIq5Fw529Rt4XpxOE+sCnErebu9n25SeSEN7DvhhVJ mario@mario-ThinkPad
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC3mjo8YkED1IAZa+3aFyJN/hGdP3QnJzpt0I2LTXI/0s2Fr2fHrTfibIQ6H9ToP3OblsMoNqWXsr9lhmCZwXNT44iEg0PEonsYC4/IP+23IJjDQe01UcQjwcf+JWugcpt00CErSxJa4H4CoRWlGW9E3ANq8ZU+zUeWB6N6SIkT3AYv8/7LV4jsu48IEiFEzZ/uVWkFTSq1nCAQihLHbXfDPl4/uRzhPVxuyAZaP+GMporugdULN1AaL+s6iPcoDoMwembEsByZagRw6vyYSypRmmdCPzKt3zWbd2XRLEgqvMgcPCrZTgUD9RIzNIp5Y7w1KNrIgaPYWrLJyoo7nSl6vRyZ1irSHMgVE6MjknUyb+Z1nHuzrA5o75M3TLWnWl51ZyKg1D0gQsG7/L8mDgklm6J+VqMREp+esStcL5d7E4gahXT9nXMf0jSvV7lw018ByhxjuGJglC/bMw9ebpCvos6MPndBf5f5958hA7KUQkcjfPH0X6LGiwmVHpWd2EFvvcJFiNSX2BDW/5x12wg+2xfhXnwVDuGMBRpf4YmAc+d2wlDgo2uFVfiqeH5WS/jUgPcVdan86+jHzeKk3dV+P9q0HGiUVg6SerazyUdCo5EVsbghpx4WXY1vNaTXzng47yERdMcky0LdiTqN+Wh4U/lBouQKbV+etGQCC5hmSQ==
+    sudo: ['ALL=(ALL) NOPASSWD:ALL']
+    groups: sudo
+    shell: /bin/bash
+runcmd:
+  # Configure ufw
+     - sed -i -e '/^IPV6/s/^.*$/IPV6=no/' /etc/default/ufw
+     - ufw enable
+     - ufw default deny incoming
+     - ufw default allow outgoing
+     - ufw allow ssh
+
+# Reboot
+power_state:
+     timeout: 120
+     delay: "+1"
+     message: Rebooting in 1 minute. Please save your work.
+     mode: reboot
+

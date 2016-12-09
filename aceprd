@@ -1,0 +1,32 @@
+#cloud-config
+hostname: aceprd
+fqdn: aceprd.sci-gaia.eu
+manage_etc_hosts: true
+package_update: true
+package_upgrade: true
+users:
+  - name: aceprd 
+    ssh-authorized-keys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDDq2Ejyci/TNDoj0STFlPRpgWhWHQbPks0LffVAIPRpFFdiZG7Gzz3Dv04AT2NaCw86rSPvGJw09qkczTG3RExceUtq+fo4x1m5EQVW1eYNstbO9tQb1hAPDFA5LXRBPBqNaFisUj2QxOSzccQlzCD5g/aaHF9J9DhXI48zqXUTT2q9myoqRkRKYYsoqUZL5q/jXIisyFPZmsExfZKd+Q0Ehag0veksq7BGULhp6Dmc7sYzXOj3KbRKUyDw7H/fkoNbvO4NCU6hLoaQRPpXwvvqVH3Olp28DQUW92+MNmanmWIq5Fw529Rt4XpxOE+sCnErebu9n25SeSEN7DvhhVJ mario@mario-ThinkPad
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC9rCWuFKe9eVGE7Fk5VppTJ/0O0Ur+KABoTawfV8ePCSCscBHdeOz/Ha2aX/HnYfCnrBQCoiEEXZmKo/MTL9cCmngWqIhzRnl+D+ZTEZ3RKtadmgIhIUAUUUbkIw45qb/JinvCku4PFSZj/KGWxsZBeG+V6GvZ8ogyHi1po0pFF5i/YTTA/d9g9Q8AzGX/qr+Ve7AL+IHu/7LDa1zoOy5p/wQZsxUtIs7HvFw4PNzUQkozmjv7ROSvrhtnGgT6J1ZWxHEYr7D2L5m+CeU+r73x0l8NqP5AEDPiiUr+PmKsEewV5JLCOpR3RVNpZEZyEm5GLu0aAbxnfyNI6Kvuu76okyqLzwMAM9FYflp9WsGkI/aG1u/YuRe8XU3DrInsZjmKQI7wRvpN2/cxORm3lbvomGH4MTeguW630o/d2m2JNvsXsNQJp1x1LvoGrmKTTkybmyUv0wrdSMRzrWlFasarVsedaJ+2rcWi3oyf+xq7aVmiO8vYsFu5Y29BEV2ArYOexTIRNpdPdf9Oz48hgxjFzSZH8E+/EtyeE/eYziFCVLN4VK4m5G4I4ScIQa6wBpC3rU98s46rLko1C8A6EaC9mPHdONfhr8ppSMKwU0SOoZiDTNENPY48sTXkhI86g3r23nw4aJNs4BcRIXstE91wgin4HoArxAtuVfjMJUqNYQ==
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQD8eZhMIccSGaJEVk7RyvVLRkFKok4oK8Jg1OOmHcb5buqorvaehTotItD7qzkH79er490+ZCfe2S2EIGeaI/8qwMSqJHm647ofdQZY5YXSeQj7D1rPLCsMPeC4jYyc4LBQbg2KZByAWQsSkNud4E442ktFbv37JKaW0P4Bdk8Gwi+5o8DN0p4eijtSqwxDDF6+IH0EvX7DLW05bNckPnHbllAIKvuAJ/uv8jRPEWH9sjju62sZW/lqByW/H12Ps3WnnEozod4PYs6OgiIsfL9H4SApqaGFomKbQbfnpmIoS0rEKB3Lgv9B+G+1J9balRVcdja1iRAHPRH5rS5FAcW8ImcPtj945deieuQdGn2USqbdhqAqZLrmJ8jGX/xG5IyerH1wodTZoaS3q8i0+yi4PTOgVeIt8QlpldI9DOXjLog7TNlXEKr7C2+pQWx1X4ZJUnMC08f0GIv7bmJ34DIbQsYDKVoDlIHtA8uo08HO5zJSxqSWxb3avG+8bBGixMFFBLGzyoNP9IgjcwiqHLKOo3p88QHkFeGKrJfExTvA5ic5v0MZndXcLCYo1RvflxMIWyW8lDNzuIvJuXiWKiGz56C+TMp/Lf69lqpXmqSAH3AKRtCSA7Dqaecf8H3YyuIWhPT9VlsKMrvhg0t3XryEwWiVzz4BAKaFAJm6o6jZSw==
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCZyi/7J7MloiZ72TmFpFsGk9J8cAniIgHcGLRxEqP9mV8+td8ima6HbDgrZOjtSqQyYxfvTzPQGR+97JVzwx2y/2eg8YbN36SrhSW6UunXSPCbYWXxaunSAZXrLDoL9nIwOLQs0+vBOyRt3M6EUvt9EkUcThMFfbmiJa7Dy+Wix9GuuGGM/k5pC/ij//vZ9xI0y7KjKyV6oFKoosyxvy8He5XQ7sxNqr38fOLEKM43ZOjXkiAeCKjloCYju8ZvGNeSFpNsqH97bi6AXf51ZJ0a5ADEpv7KP0q+WfhNP/VVebsZDzblFAx3F5pMZbNhxMzyJnRoa1bhTKTevaPoJC57
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCqDWJVnCS2T3pkP5iNLm6i6QaWS11Sv6tBYYJbyu6lQM3e+fPtBPoqi03ACAec65olC+9kQlnXNU93uUCPAjGfKGFxPpzv1B6ejxY/JW2eNX/Bl7mDVLwjiVoj5/U/9PLWB8hibDoY+EWTonDVUtNkPOxhVGg0P6hZC/GG3b9KmOEj5TT3lMjBVPHFAVHUQn/di+uLuVOWZXt5uWLxfDE/6ZPvGyUjvwqUzcHUgc6+Zcj5Yiakyj521qLTHmJqc1tzE3HBZvmL+TWH1PO1ihuFaHOYPt6dd0ekviXWC3ffUA31tNhhK5HzCJOCS3D9lbJqolJzWIh+ZY3IKtfoINSE49A9C7CcnnpthseNPO0i/+PYuNRduyp+woD6pdVUUNSDp/OSvu6ei3HubHfRPtewUXSGHOOgL/m5lKuxia5gYvCJ8SaNOBcTwyimiP6Qftp/wrH1+L0uoqjSz1sdLQcyNViOCaclPWtaSDnunrm2dEBiYL+GX5XjgYZAuTEv3SURYEj1sB75zAZRXc18N+tSlHbi7nYZ0hB0ZTSqytR1Jds+nH3aVJ1ry1HSAhi/WDQ7NKqNiGNKA2wa/2wdqn+g7qjH87s6CF1zv0FSqzs8feABRryhOxJjFYbFPiMyLozgiIeI76qCXyCebaCHG2g6D2WmJ/obv6CewiML1R3iIQ==
+    sudo: ['ALL=(ALL) NOPASSWD:ALL']
+    groups: sudo
+    shell: /bin/bash
+runcmd:
+  # Configure ufw
+     - sed -i -e '/^IPV6/s/^.*$/IPV6=no/' /etc/default/ufw
+     - ufw enable
+     - ufw default deny incoming
+     - ufw default allow outgoing
+     - ufw allow ssh
+
+# Reboot
+power_state:
+     timeout: 120
+     delay: "+1"
+     message: Rebooting in 1 minute. Please save your work.
+     mode: reboot
+
